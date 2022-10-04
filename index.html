@@ -1,5 +1,5 @@
 <!DOCTYPE html><head><meta charset = "utf-8">
-<title>PROJECT6moldifiedview</title>
+<title>3_Oct - HTMLFRIENDLY</title>
 
 <style type = "text/css">
 * {
@@ -9,8 +9,8 @@ div.sketch {
   position: relative;
 }
 .io-slider-box {
-background-color: white; border: 1px solid gray; font-size:8px;
-text-align: center; vertical-align: middle; line-height: 9px;
+background-color: white; border: 1px solid gray; font-size:4px;
+text-align: center; vertical-align: middle; line-height: 5px;
 }
 .io-slider-slide {
   padding: 0; margin: 0; -webkit-appearance: none; background: transparent;
@@ -19,15 +19,15 @@ text-align: center; vertical-align: middle; line-height: 9px;
   background: transparent; border-color: transparent; color: transparent;
 }
 .io-slider-slide::-webkit-slider-thumb {
-  -webkit-appearance: none; width: 10px; height: 10px;
+  -webkit-appearance: none; width: 5px; height: 5px;
   border-radius: 20%; background: blue; cursor: pointer;
 }
 .io-slider-slide::-moz-range-thumb {
-  height: 10px; width: 10px;
+  height: 5px; width: 5px;
     border-radius: 20%; background: blue; cursor: pointer;
 }
 .io-slider-slide::-ms-thumb {
-  height: 10px; width: 10px;
+  height: 5px; width: 5px;
   border-radius: 20%; background: blue; cursor: pointer;
 }
 div.io-chart {
@@ -63,7 +63,7 @@ button.exportCSV {
 <script type="text/javascript" src="wasm-arrays.min.js"></script>
 <script type="text/javascript" src="d3.min.js"></script>
 </head><body>
-<h1>PROJECT6moldifiedview</h1>
+<h1>3_Oct - HTMLFRIENDLY</h1>
 
 <div class="topBar">
 <h3>powered by <a target="blank" href="https://vensim.com/">Vensim</a></h3>
@@ -73,43 +73,175 @@ button.exportCSV {
 
 <div class="sketch">
 <img src="sketch.png"></img>
-<div class="io-slider-box" name="time to adjust resources" style="position: absolute; top: 110px; left: 269px; width: 115px; height: 10px">
-2
-</div>
-<input class="io-slider-slide" style="position: absolute; top: 120px; left: 269px; width: 115px" type="range" name="time to adjust resources" min="-10" max="20" step="0.1"></input>
-<div class="io-slider-box" name="productivity" style="position: absolute; top: 282px; left: 297px; width: 58px; height: 9px">
+<div class="io-slider-box" name="time to adjust resources" style="position: absolute; top: 764px; left: 811px; width: 83px; height: 5px">
 1
 </div>
-<input class="io-slider-slide" style="position: absolute; top: 291px; left: 297px; width: 58px" type="range" name="productivity" min="-1" max="2" step="0.01"></input>
-<div class="io-slider-box" name="max work flow" style="position: absolute; top: 238px; left: 155px; width: 70px; height: 10px">
+<input class="io-slider-slide" style="position: absolute; top: 769px; left: 811px; width: 83px" type="range" name="time to adjust resources" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="max work flow" style="position: absolute; top: 745px; left: 782px; width: 46px; height: 6px">
 500
 </div>
-<input class="io-slider-slide" style="position: absolute; top: 248px; left: 155px; width: 70px" type="range" name="max work flow" min="-1000" max="2000" step="10"></input>
-<div class="io-slider-box" name="scheduled completion date" style="position: absolute; top: 395px; left: 120px; width: 130px; height: 9px">
-10
+<input class="io-slider-slide" style="position: absolute; top: 751px; left: 782px; width: 46px" type="range" name="max work flow" min="-1000" max="2000" step="10"></input>
+<div class="io-slider-box" name="scheduled completion date" style="position: absolute; top: 844px; left: 707px; width: 86px; height: 5px">
+60
 </div>
-<input class="io-slider-slide" style="position: absolute; top: 404px; left: 120px; width: 130px" type="range" name="scheduled completion date" min="-10" max="20" step="0.1"></input>
-<div class="io-slider-box" name="initial project definition" style="position: absolute; top: 168px; left: 572px; width: 108px; height: 9px">
+<input class="io-slider-slide" style="position: absolute; top: 849px; left: 707px; width: 86px" type="range" name="scheduled completion date" min="-100" max="200" step="1"></input>
+<div class="io-slider-box" name="Baseline Funding" style="position: absolute; top: 1038px; left: 819px; width: 55px; height: 6px">
+250
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1044px; left: 819px; width: 55px" type="range" name="Baseline Funding" min="-1000" max="2000" step="10"></input>
+<div class="io-slider-box" name="Satellites Requested" style="position: absolute; top: 883px; left: 1064px; width: 55px; height: 6px">
 1000
 </div>
-<input class="io-slider-slide" style="position: absolute; top: 177px; left: 572px; width: 108px" type="range" name="initial project definition" min="-1000" max="2000" step="10"></input>
-<div class="io-slider-box" name="work quality" style="position: absolute; top: 306px; left: 750px; width: 59px; height: 10px">
-0.9
-</div>
-<input class="io-slider-slide" style="position: absolute; top: 316px; left: 750px; width: 59px" type="range" name="work quality" min="-1" max="2" step="0.01"></input>
-<div class="io-slider-box" name="productivity" style="position: absolute; top: 187px; left: 682px; width: 69px; height: 10px">
+<input class="io-slider-slide" style="position: absolute; top: 889px; left: 1064px; width: 55px" type="range" name="Satellites Requested" min="-1000" max="2000" step="10"></input>
+<div class="io-slider-box" name="Modularity Factor" style="position: absolute; top: 890px; left: 1015px; width: 56px; height: 6px">
 1
 </div>
-<input class="io-slider-slide" style="position: absolute; top: 197px; left: 682px; width: 69px" type="range" name="productivity" min="-1" max="2" step="0.01"></input>
-<div class="io-slider-box" name="Cap" style="position: absolute; top: 341px; left: 483px; width: 40px; height: 9px">
-200
+<input class="io-slider-slide" style="position: absolute; top: 896px; left: 1015px; width: 56px" type="range" name="Modularity Factor" min="1" max="6" step="1"></input>
+<div class="io-slider-box" name="Modularity Factor" style="position: absolute; top: 403px; left: 762px; width: 56px; height: 5px">
+1
 </div>
-<input class="io-slider-slide" style="position: absolute; top: 350px; left: 483px; width: 40px" type="range" name="Cap" min="-1000" max="2000" step="10"></input>
-<div class="io-chart" name="Cumulative Resources Used" varname='Cumulative Resources Used' xaxisname="Month" yaxisname="Dollars" include0 style="position: absolute; top: 406px; left: 753px; width: 333px; height: 276px"></div>
-<div class="io-chart" name="Work Accomplished" varname='Work Accomplished' xaxisname="Month" yaxisname="Tasks" include0 style="position: absolute; top: 407px; left: 422px; width: 324px; height: 281px"></div>
-<div class="io-chart" name="Work Remaining" varname='Work Remaining' xaxisname="Month" yaxisname="Tasks" include0 style="position: absolute; top: 405px; left: 86px; width: 316px; height: 289px"></div>
-<div class="io-chart" name="Undiscovered Rework" varname='Undiscovered Rework' xaxisname="Month" yaxisname="Tasks" include0 style="position: absolute; top: 404px; left: 1092px; width: 348px; height: 284px"></div>
-<div class="io-chart" name="work flow" varname='work flow' xaxisname="Month" yaxisname="Tasks/Month" include0 style="position: absolute; top: 68px; left: 1162px; width: 335px; height: 329px"></div>
+<input class="io-slider-slide" style="position: absolute; top: 408px; left: 762px; width: 56px" type="range" name="Modularity Factor" min="1" max="6" step="1"></input>
+<div class="io-slider-box" name="Exogenous Technology and Process Halflife" style="position: absolute; top: 214px; left: 430px; width: 55px; height: 6px">
+48
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 220px; left: 430px; width: 55px" type="range" name="Exogenous Technology and Process Halflife" min="-100" max="200" step="1"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 290px; left: 304px; width: 56px; height: 5px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 295px; left: 304px; width: 56px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="start" style="position: absolute; top: 163px; left: 203px; width: 55px; height: 6px">
+0
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 169px; left: 203px; width: 55px" type="range" name="start" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="repeattime" style="position: absolute; top: 153px; left: 272px; width: 56px; height: 6px">
+12
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 159px; left: 272px; width: 56px" type="range" name="repeattime" min="-100" max="200" step="1"></input>
+<div class="io-slider-box" name="end" style="position: absolute; top: 209px; left: 163px; width: 56px; height: 5px">
+60
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 214px; left: 163px; width: 56px" type="range" name="end" min="-100" max="200" step="1"></input>
+<div class="io-slider-box" name="Updated Launch Time" style="position: absolute; top: 432px; left: 885px; width: 55px; height: 6px">
+0.25
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 438px; left: 885px; width: 55px" type="range" name="Updated Launch Time" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Sats per LV" style="position: absolute; top: 426px; left: 794px; width: 55px; height: 5px">
+55
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 431px; left: 794px; width: 55px" type="range" name="Sats per LV" min="1" max="100" step="1"></input>
+<div class="io-slider-box" name="Modularity Factor" style="position: absolute; top: 319px; left: 510px; width: 55px; height: 5px">
+1
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 324px; left: 510px; width: 55px" type="range" name="Modularity Factor" min="1" max="6" step="1"></input>
+<div class="io-slider-box" name="Satellite Reliability" style="position: absolute; top: 455px; left: 1367px; width: 56px; height: 6px">
+0.9
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 461px; left: 1367px; width: 56px" type="range" name="Satellite Reliability" min="0" max="1" step="0.01"></input>
+<div class="io-slider-box" name="Beta1" style="position: absolute; top: 394px; left: 1424px; width: 56px; height: 5px">
+0.4154
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 399px; left: 1424px; width: 56px" type="range" name="Beta1" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Beta2" style="position: absolute; top: 364px; left: 1521px; width: 55px; height: 5px">
+5.06
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 369px; left: 1521px; width: 55px" type="range" name="Beta2" min="-10" max="20" step="0.1"></input>
+<div class="io-slider-box" name="Theta1" style="position: absolute; top: 393px; left: 1460px; width: 55px; height: 5px">
+558612
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 398px; left: 1460px; width: 55px" type="range" name="Theta1" min="-1e+06" max="2e+06" step="10000"></input>
+<div class="io-slider-box" name="Theta2" style="position: absolute; top: 380px; left: 1493px; width: 56px; height: 5px">
+122.52
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 385px; left: 1493px; width: 56px" type="range" name="Theta2" min="-1000" max="2000" step="10"></input>
+<div class="io-slider-box" name="k" style="position: absolute; top: 350px; left: 1539px; width: 56px; height: 5px">
+0.9057
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 355px; left: 1539px; width: 56px" type="range" name="k" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Design Life" style="position: absolute; top: 379px; left: 934px; width: 56px; height: 5px">
+24
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 384px; left: 934px; width: 56px" type="range" name="Design Life" min="8.40779e-45" max="200" step="1"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 327px; left: 1062px; width: 56px; height: 6px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 333px; left: 1062px; width: 56px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 436px; left: 1061px; width: 56px; height: 6px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 442px; left: 1061px; width: 56px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 540px; left: 1043px; width: 55px; height: 5px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 545px; left: 1043px; width: 55px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 375px; left: 844px; width: 55px; height: 6px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 381px; left: 844px; width: 55px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 497px; left: 817px; width: 56px; height: 5px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 502px; left: 817px; width: 56px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Human Exp Decay Rate" style="position: absolute; top: 669px; left: 873px; width: 56px; height: 5px">
+24
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 674px; left: 873px; width: 56px" type="range" name="Human Exp Decay Rate" min="-100" max="200" step="1"></input>
+<div class="io-slider-box" name="Baseline Funding Increase Ratio" style="position: absolute; top: 1018px; left: 885px; width: 56px; height: 5px">
+0.25
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1023px; left: 885px; width: 56px" type="range" name="Baseline Funding Increase Ratio" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Max Work Quality Possible" style="position: absolute; top: 615px; left: 976px; width: 55px; height: 5px">
+1
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 620px; left: 976px; width: 55px" type="range" name="Max Work Quality Possible" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Minimum Work Quality Possible" style="position: absolute; top: 622px; left: 1041px; width: 55px; height: 5px">
+0.25
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 627px; left: 1041px; width: 55px" type="range" name="Minimum Work Quality Possible" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Initial Work Quality Fraction" style="position: absolute; top: 713px; left: 1006px; width: 56px; height: 5px">
+0.34
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 718px; left: 1006px; width: 56px" type="range" name="Initial Work Quality Fraction" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Exogenous Technology and Process Halflife" style="position: absolute; top: 728px; left: 1127px; width: 55px; height: 5px">
+48
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 733px; left: 1127px; width: 55px" type="range" name="Exogenous Technology and Process Halflife" min="-100" max="200" step="1"></input>
+<div class="io-slider-box" name="Base Productivity Rate" style="position: absolute; top: 842px; left: 646px; width: 55px; height: 5px">
+1
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 847px; left: 646px; width: 55px" type="range" name="Base Productivity Rate" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name=""Policy: Ratio of Productivity Forced"" style="position: absolute; top: 881px; left: 926px; width: 55px; height: 5px">
+1
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 886px; left: 926px; width: 55px" type="range" name=""Policy: Ratio of Productivity Forced"" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 556px; left: 693px; width: 55px; height: 5px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 561px; left: 693px; width: 55px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Error Detection Tuning Variable" style="position: absolute; top: 748px; left: 1400px; width: 55px; height: 6px">
+250
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 754px; left: 1400px; width: 55px" type="range" name="Error Detection Tuning Variable" min="-1000" max="2000" step="10"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 707px; left: 880px; width: 56px; height: 5px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 712px; left: 880px; width: 56px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Reduction Per Doubling of Experience" style="position: absolute; top: 906px; left: 687px; width: 56px; height: 6px">
+0.15
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 912px; left: 687px; width: 56px" type="range" name="Reduction Per Doubling of Experience" min="-1" max="2" step="0.01"></input>
+<div class="io-chart" name="Test With Failure Rate Instead Current Sats in Space Total" varname='Test With Failure Rate Instead Current Sats in Space Total' xaxisname="Month" yaxisname="" include0 style="position: absolute; top: 386px; left: 1425px; width: 363px; height: 319px"></div>
+<div class="io-chart" name="Surplus Money" varname='Surplus Money' xaxisname="Month" yaxisname="Dollars/Month" include0 style="position: absolute; top: 841px; left: 313px; width: 267px; height: 162px"></div>
+<div class="io-chart" name="Cumulative XP" varname='Cumulative XP' xaxisname="Month" yaxisname="" include0 style="position: absolute; top: 473px; left: 311px; width: 257px; height: 187px"></div>
+<div class="io-chart" name="productivity rate" varname='productivity rate' xaxisname="Month" yaxisname="Tasks/(Dollars*Month)" include0 style="position: absolute; top: 660px; left: 315px; width: 258px; height: 176px"></div>
+<div class="io-chart" name="NRE Pulse" varname='NRE Pulse' xaxisname="Month" yaxisname="Dmnl" include0 style="position: absolute; top: 93px; left: 482px; width: 291px; height: 111px"></div>
+<div class="io-chart" name="Technology Value" varname='Technology Value' xaxisname="Month" yaxisname="Dmnl" include0 style="position: absolute; top: 456px; left: 46px; width: 259px; height: 212px"></div>
+<div class="io-chart" name="Launch Rate" varname='Launch Rate' xaxisname="Month" yaxisname="" include0 style="position: absolute; top: 0px; left: 915px; width: 207px; height: 145px"></div>
+<div class="io-chart" name="Total Program Overruns in Tasks" varname='Total Program Overruns in Tasks' xaxisname="Month" yaxisname="Tasks" include0 style="position: absolute; top: 1003px; left: 303px; width: 276px; height: 172px"></div>
+<div class="io-chart" name="work flow" varname='work flow' xaxisname="Month" yaxisname="Tasks/Month" include0 style="position: absolute; top: 1009px; left: 584px; width: 244px; height: 176px"></div>
+<div class="io-chart" name="Work Remaining" varname='Work Remaining' xaxisname="Month" yaxisname="Tasks" include0 style="position: absolute; top: 1039px; left: 833px; width: 235px; height: 164px"></div>
+<div class="io-chart" name="Work Quality Stock" varname='Work Quality Stock' xaxisname="Month" yaxisname="" include0 style="position: absolute; top: 1046px; left: 1073px; width: 222px; height: 175px"></div>
+<div class="io-chart" name="Undiscovered Rework" varname='Undiscovered Rework' xaxisname="Month" yaxisname="Tasks" include0 style="position: absolute; top: 1048px; left: 1296px; width: 200px; height: 172px"></div>
+<div class="io-chart" name="Resources Available" varname='Resources Available' xaxisname="Month" yaxisname="Dollars" include0 style="position: absolute; top: 895px; left: 1395px; width: 260px; height: 149px"></div>
 </div>
 
 <script type="text/javascript">

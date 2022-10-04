@@ -1,0 +1,450 @@
+<!DOCTYPE html><head><meta charset = "utf-8">
+<title>3_Oct</title>
+
+<style type = "text/css">
+* {
+  box-sizing: border-box;
+}
+div.sketch {
+  position: relative;
+}
+.io-slider-box {
+background-color: white; border: 1px solid gray; font-size:8px;
+text-align: center; vertical-align: middle; line-height: 9px;
+}
+.io-slider-slide {
+  padding: 0; margin: 0; -webkit-appearance: none; background: transparent;
+}
+.io-slider-slide::-ms-track {
+  background: transparent; border-color: transparent; color: transparent;
+}
+.io-slider-slide::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 10px; height: 10px;
+  border-radius: 20%; background: blue; cursor: pointer;
+}
+.io-slider-slide::-moz-range-thumb {
+  height: 10px; width: 10px;
+    border-radius: 20%; background: blue; cursor: pointer;
+}
+.io-slider-slide::-ms-thumb {
+  height: 10px; width: 10px;
+  border-radius: 20%; background: blue; cursor: pointer;
+}
+div.io-chart {
+  background: white;
+  border: 1px solid gray;
+}
+div.io-chart > .svg {
+  width: 100%;
+  height: 100%;
+}
+div.topBar * {
+  display: inline-block;
+}
+h1, h3 {
+  margin: 0 9px;
+}
+button.resetAll {
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 16px;
+  margin: 12px;
+}
+button.exportCSV {
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 16px;
+  margin: 12px;
+}
+</style>
+
+<script type="text/javascript" src="mdl.js"></script>
+<script type="text/javascript" src="vensim_wasm.js"></script>
+<script type="text/javascript" src="wasm-arrays.min.js"></script>
+<script type="text/javascript" src="d3.min.js"></script>
+</head><body>
+<h1>3_Oct</h1>
+
+<div class="topBar">
+<h3>powered by <a target="blank" href="https://vensim.com/">Vensim</a></h3>
+<button class="resetAll">Reset All Sliders</button>
+<button class="exportCSV">Export CSV</button>
+</div>
+
+<div class="sketch">
+<img src="sketch.png"></img>
+<div class="io-slider-box" name="time to adjust resources" style="position: absolute; top: 1247px; left: 1650px; width: 150px; height: 9px">
+1
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1256px; left: 1650px; width: 150px" type="range" name="time to adjust resources" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="max work flow" style="position: absolute; top: 1214px; left: 1596px; width: 83px; height: 10px">
+500
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1224px; left: 1596px; width: 83px" type="range" name="max work flow" min="-1000" max="2000" step="10"></input>
+<div class="io-slider-box" name="scheduled completion date" style="position: absolute; top: 1392px; left: 1461px; width: 156px; height: 10px">
+60
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1402px; left: 1461px; width: 156px" type="range" name="scheduled completion date" min="-100" max="200" step="1"></input>
+<div class="io-slider-box" name="Baseline Funding" style="position: absolute; top: 1745px; left: 1663px; width: 101px; height: 9px">
+250
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1754px; left: 1663px; width: 101px" type="range" name="Baseline Funding" min="-1000" max="2000" step="10"></input>
+<div class="io-slider-box" name="Satellites Requested" style="position: absolute; top: 1464px; left: 2107px; width: 100px; height: 10px">
+1000
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1474px; left: 2107px; width: 100px" type="range" name="Satellites Requested" min="-1000" max="2000" step="10"></input>
+<div class="io-slider-box" name="Modularity Factor" style="position: absolute; top: 1477px; left: 2019px; width: 100px; height: 9px">
+1
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1486px; left: 2019px; width: 100px" type="range" name="Modularity Factor" min="1" max="6" step="1"></input>
+<div class="io-slider-box" name="Modularity Factor" style="position: absolute; top: 594px; left: 1561px; width: 101px; height: 9px">
+1
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 603px; left: 1561px; width: 101px" type="range" name="Modularity Factor" min="1" max="6" step="1"></input>
+<div class="io-slider-box" name="Exogenous Technology and Process Halflife" style="position: absolute; top: 253px; left: 959px; width: 100px; height: 9px">
+48
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 262px; left: 959px; width: 100px" type="range" name="Exogenous Technology and Process Halflife" min="-100" max="200" step="1"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 389px; left: 732px; width: 100px; height: 10px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 399px; left: 732px; width: 100px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="start" style="position: absolute; top: 160px; left: 548px; width: 100px; height: 10px">
+0
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 170px; left: 548px; width: 100px" type="range" name="start" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="repeattime" style="position: absolute; top: 142px; left: 674px; width: 100px; height: 10px">
+12
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 152px; left: 674px; width: 100px" type="range" name="repeattime" min="-100" max="200" step="1"></input>
+<div class="io-slider-box" name="end" style="position: absolute; top: 242px; left: 477px; width: 100px; height: 9px">
+60
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 251px; left: 477px; width: 100px" type="range" name="end" min="-100" max="200" step="1"></input>
+<div class="io-slider-box" name="Updated Launch Time" style="position: absolute; top: 647px; left: 1783px; width: 101px; height: 10px">
+0.25
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 657px; left: 1783px; width: 101px" type="range" name="Updated Launch Time" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Sats per LV" style="position: absolute; top: 636px; left: 1618px; width: 101px; height: 9px">
+55
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 645px; left: 1618px; width: 101px" type="range" name="Sats per LV" min="1" max="100" step="1"></input>
+<div class="io-slider-box" name="Modularity Factor" style="position: absolute; top: 442px; left: 1104px; width: 100px; height: 9px">
+1
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 451px; left: 1104px; width: 100px" type="range" name="Modularity Factor" min="1" max="6" step="1"></input>
+<div class="io-slider-box" name="Satellite Reliability" style="position: absolute; top: 689px; left: 2656px; width: 101px; height: 9px">
+0.9
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 698px; left: 2656px; width: 101px" type="range" name="Satellite Reliability" min="0" max="1" step="0.01"></input>
+<div class="io-slider-box" name="Beta1" style="position: absolute; top: 577px; left: 2759px; width: 101px; height: 9px">
+0.4154
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 586px; left: 2759px; width: 101px" type="range" name="Beta1" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Beta2" style="position: absolute; top: 523px; left: 2935px; width: 100px; height: 10px">
+5.06
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 533px; left: 2935px; width: 100px" type="range" name="Beta2" min="-10" max="20" step="0.1"></input>
+<div class="io-slider-box" name="Theta1" style="position: absolute; top: 576px; left: 2824px; width: 101px; height: 9px">
+558612
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 585px; left: 2824px; width: 101px" type="range" name="Theta1" min="-1e+06" max="2e+06" step="10000"></input>
+<div class="io-slider-box" name="Theta2" style="position: absolute; top: 553px; left: 2885px; width: 100px; height: 9px">
+122.52
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 562px; left: 2885px; width: 100px" type="range" name="Theta2" min="-1000" max="2000" step="10"></input>
+<div class="io-slider-box" name="k" style="position: absolute; top: 497px; left: 2968px; width: 100px; height: 10px">
+0.9057
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 507px; left: 2968px; width: 100px" type="range" name="k" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Design Life" style="position: absolute; top: 550px; left: 1873px; width: 100px; height: 10px">
+24
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 560px; left: 1873px; width: 100px" type="range" name="Design Life" min="8.40779e-45" max="200" step="1"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 457px; left: 2104px; width: 100px; height: 9px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 466px; left: 2104px; width: 100px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 655px; left: 2102px; width: 100px; height: 9px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 664px; left: 2102px; width: 100px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 842px; left: 2068px; width: 101px; height: 10px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 852px; left: 2068px; width: 101px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 544px; left: 1709px; width: 100px; height: 10px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 554px; left: 1709px; width: 100px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 764px; left: 1660px; width: 101px; height: 9px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 773px; left: 1660px; width: 101px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Human Exp Decay Rate" style="position: absolute; top: 1076px; left: 1762px; width: 100px; height: 10px">
+24
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1086px; left: 1762px; width: 100px" type="range" name="Human Exp Decay Rate" min="-100" max="200" step="1"></input>
+<div class="io-slider-box" name="Baseline Funding Increase Ratio" style="position: absolute; top: 1707px; left: 1784px; width: 100px; height: 10px">
+0.25
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1717px; left: 1784px; width: 100px" type="range" name="Baseline Funding Increase Ratio" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Max Work Quality Possible" style="position: absolute; top: 978px; left: 1947px; width: 101px; height: 10px">
+1
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 988px; left: 1947px; width: 101px" type="range" name="Max Work Quality Possible" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Minimum Work Quality Possible" style="position: absolute; top: 991px; left: 2065px; width: 101px; height: 9px">
+0.25
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1000px; left: 2065px; width: 101px" type="range" name="Minimum Work Quality Possible" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Initial Work Quality Fraction" style="position: absolute; top: 1156px; left: 2003px; width: 100px; height: 9px">
+0.34
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1165px; left: 2003px; width: 100px" type="range" name="Initial Work Quality Fraction" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Exogenous Technology and Process Halflife" style="position: absolute; top: 1183px; left: 2221px; width: 101px; height: 9px">
+48
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1192px; left: 2221px; width: 101px" type="range" name="Exogenous Technology and Process Halflife" min="-100" max="200" step="1"></input>
+<div class="io-slider-box" name="Base Productivity Rate" style="position: absolute; top: 1388px; left: 1350px; width: 100px; height: 10px">
+1
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1398px; left: 1350px; width: 100px" type="range" name="Base Productivity Rate" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name=""Policy: Ratio of Productivity Forced"" style="position: absolute; top: 1459px; left: 1857px; width: 101px; height: 10px">
+1
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1469px; left: 1857px; width: 101px" type="range" name=""Policy: Ratio of Productivity Forced"" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 871px; left: 1435px; width: 100px; height: 10px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 881px; left: 1435px; width: 100px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Error Detection Tuning Variable" style="position: absolute; top: 1220px; left: 2715px; width: 101px; height: 9px">
+250
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1229px; left: 2715px; width: 101px" type="range" name="Error Detection Tuning Variable" min="-1000" max="2000" step="10"></input>
+<div class="io-slider-box" name="TIME STEP" style="position: absolute; top: 1144px; left: 1775px; width: 101px; height: 9px">
+0.125
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1153px; left: 1775px; width: 101px" type="range" name="TIME STEP" min="-1" max="2" step="0.01"></input>
+<div class="io-slider-box" name="Reduction Per Doubling of Experience" style="position: absolute; top: 1506px; left: 1425px; width: 101px; height: 9px">
+0.15
+</div>
+<input class="io-slider-slide" style="position: absolute; top: 1515px; left: 1425px; width: 101px" type="range" name="Reduction Per Doubling of Experience" min="-1" max="2" step="0.01"></input>
+<div class="io-chart" name="work flow and Resources Used" varname='work flow' xaxisname="Month" yaxisname="Tasks/Month" include0 style="position: absolute; top: 1429px; left: 364px; width: 417px; height: 294px"></div>
+<div class="io-chart" name="Work Accomplished and Work Remaining" varname='Work Accomplished' xaxisname="Month" yaxisname="Tasks" include0 style="position: absolute; top: 1435px; left: 789px; width: 372px; height: 289px"></div>
+<div class="io-chart" name="Average Attribute of Satellites on Orbit" varname='Average Attribute of Satellites on Orbit' xaxisname="Month" yaxisname="" include0 style="position: absolute; top: 288px; left: 182px; width: 377px; height: 356px"></div>
+<div class="io-chart" name="Sum of Tech floating in Orbit" varname='Sum of Tech floating in Orbit' xaxisname="Month" yaxisname="" include0 style="position: absolute; top: 629px; left: 2820px; width: 424px; height: 406px"></div>
+<div class="io-chart" name="Current Sats in Space Total" varname='Current Sats in Space Total' xaxisname="Month" yaxisname="" include0 style="position: absolute; top: 627px; left: 3253px; width: 393px; height: 414px"></div>
+<div class="io-chart" name="Test With Failure Rate Instead Current Sats in Space Total" varname='Test With Failure Rate Instead Current Sats in Space Total' xaxisname="Month" yaxisname="" include0 style="position: absolute; top: 34px; left: 3318px; width: 658px; height: 579px"></div>
+<div class="io-chart" name="Surplus Money" varname='Surplus Money' xaxisname="Month" yaxisname="Dollars/Month" include0 style="position: absolute; top: 1074px; left: 784px; width: 379px; height: 359px"></div>
+<div class="io-chart" name="Overruns_Graph" varname='Overrun Spikes' xaxisname="Month" yaxisname="Dollars/Month" include0 style="position: absolute; top: 1076px; left: 361px; width: 421px; height: 354px"></div>
+<div class="io-chart" name="Cumulative XP" varname='' xaxisname="Month" yaxisname="" include0 style="position: absolute; top: 698px; left: 643px; width: 487px; height: 367px"></div>
+<div class="io-chart" name="NRE Pulses and Input" varname='Technology Advancement Curve' xaxisname="Month" yaxisname="Dmnl" include0 style="position: absolute; top: 0px; left: 1074px; width: 424px; height: 310px"></div>
+</div>
+
+<script type="text/javascript">
+
+var VensimLoadedFlag = 0;
+
+function OnVensimLoaded()
+	{
+		VensimLoadedFlag = _IsVensimLoaded();
+		runModel(0);
+	}
+
+
+var VensimCharts = [];
+
+function UpdateCharts(run)
+	{
+            var margin = {left: 70, right: 30, top: 30, bottom: 50};
+			d3.selectAll("div.io-chart").each(function() {
+				var div = d3.select(this);
+				var width = parseInt(div.style("width"), 10);
+				var height = parseInt(div.style("height"), 10);
+				var temp = ["0", "0", width, height];
+				div.selectAll("svg").data([0]).join("svg").attr("viewBox", temp.join(","));
+				var chart = div.select("svg");
+				var fTimeVals = GetSeries("Time");
+                                var varname = div.attr("varname");
+				var fVals = GetSeries(varname);
+				if (!VensimCharts[varname]) {
+					VensimCharts[varname] = { runs: [] };
+				}
+				var o = VensimCharts[varname];
+				o.runs[run] = {
+					times: fTimeVals,
+					vals: fVals,
+				}
+
+				var vmin = Number.MAX_VALUE;
+				var vmax = -Number.MAX_VALUE;
+				for (r in o.runs) {
+					vmin = Math.min(vmin, d3.min(o.runs[r].vals));
+					vmax = Math.max(vmax, d3.max(o.runs[r].vals));
+				}
+				if ( this.hasAttribute("include0") ) { // force the range to include zero
+					if (vmin > 0) vmin = 0;
+					else if (vmax < 0) vmax = 0;
+				}
+				if ( this.hasAttribute("ymin") ) {
+					vmin = this.getAttribute("ymin");
+				}
+				if ( this.hasAttribute("ymax") ) {
+					vmax = this.getAttribute("ymax");
+				}
+				if ( vmin == vmax ) { // if the range is degenerate, modify
+					if ( vmin == 0 ) {
+						vmin = 0;
+						vmax = 1;
+					}
+					else {
+						vmin = vmax/2;
+						vmax = vmax*2;
+					}
+				}
+				
+                chart.selectAll("text.title")
+                  .data([0])
+                  .join("text").attr("class", "title")
+                  .attr("x", (width - margin.left - margin.right)/2 + margin.left)
+                  .attr("y", (margin.top / 2))
+                  .attr("text-anchor", "middle")
+                  .style("font-size", "16px")
+                  .text(div.attr("name"));
+				  
+                var xscale = d3.scaleLinear()
+                    .domain([d3.min(fTimeVals), d3.max(fTimeVals)])
+                    .range([margin.left, width - margin.right]);
+                chart.selectAll("g.xaxis")
+                  .data([0])
+                  .join("g").attr("class", "xaxis")
+                  .attr("transform", "translate(0, " + (height - margin.bottom) + ")")
+                  .call(d3.axisBottom(xscale).ticks(width / 80).tickSizeOuter(0));
+                chart.selectAll("text.xunits")
+                  .data([0])
+                  .join("text").attr("class", "xunits")
+                  .attr("x", (width - margin.left - margin.right)/2 + margin.left)
+                  .attr("y", height - 14)
+                  .attr("text-anchor", "middle")
+                  .style("font-size", "16px")
+                  .text(div.attr("xaxisname"));
+				  
+                var yscale = d3.scaleLinear()
+                    .domain([vmin, vmax])
+                    .range([margin.top, height - margin.bottom]);
+                var yscale_inv = d3.scaleLinear()
+                    .domain([vmin, vmax])
+                    .range([height - margin.bottom, margin.top]);
+                chart.selectAll("g.yaxis")
+                  .data([0])
+                  .join("g").attr("class", "yaxis")
+                  .attr("transform", "translate(" + margin.left + ", 0)")
+                  .call(d3.axisLeft(yscale_inv));
+                chart.selectAll("text.yunits")
+                  .data([0])
+                  .join("text").attr("class", "yunits")
+                  .attr("transform", "rotate(-90)")
+                  .attr("y", 16)
+                  .attr("x", -(height - margin.top - margin.bottom)/2 - margin.top)
+                  .attr("text-anchor", "middle")
+                  .style("font-size", "16px")
+                  .text(div.attr("yaxisname"));
+				  
+                for (r in o.runs) {
+                    var color = "red";
+                    if (r == 0) { color = "blue"; }
+                    chart.selectAll("path.data" + r)
+                      .data([o.runs[r].vals])
+                      .join("path").attr("class", "data" + r).attr("d", (d, i) =>
+                        d3.line()
+                          .x((d, i) => xscale(o.runs[r].times[i]))
+                          .y((d) => height - margin.bottom - yscale(d) + margin.top)(d))
+                      .attr("stroke", color)
+                      .attr("fill", "none");
+                }
+            });
+}
+
+// reset slider values to the value attribute in the io-slider-slide
+function resetAllSliders() {
+	d3.selectAll("input.io-slider-slide").nodes().forEach(function(i){
+		i.value = i.getAttribute("value");
+		d3.selectAll("div.io-slider-box[name=\"" + i.name + "\"]").text(i.valueAsNumber);
+	});
+}
+
+// reset slider values to the value in the WASM code
+function updateAllSliders() {
+	d3.selectAll("input.io-slider-slide").nodes().forEach(function(i){
+		i.value = GetConstant(i.name);
+		d3.selectAll("div.io-slider-box[name=\"" + i.name + "\"]").text(i.valueAsNumber);
+	});
+}
+
+// set slider values to the value in the WASM code and modify the DOM io-slider values to make that permanent
+// if the value attribute is already defined, skip
+// this permits the user to add value="37.5" to an io-slider-slider to override the WASM default
+function initializeSliders() {
+	d3.selectAll("input.io-slider-slide").nodes().forEach(function(i){
+		var v;
+		if ( i.hasAttribute("value")) {
+			v = i.getAttribute("value");
+		}
+		else {
+			v = GetConstant(i.name);
+			i.setAttribute( "value", v);
+		}
+		// ensure that the property and text match the attribute
+		i.value = v;
+		d3.selectAll("div.io-slider-box[name=\"" + i.name + "\"]").text(i.valueAsNumber);
+	});
+}
+
+firstRun = true;
+
+function runModel(run) {
+if (  VensimLoadedFlag == 0)
+{
+	return;
+}
+//if ( VensimLoadingFilesCount > 0)
+//{
+//	return;
+//}
+
+InitializeModel();
+if (firstRun) {
+	initializeSliders();
+	firstRun = false;
+}
+
+// set all slider constants
+d3.selectAll("input.io-slider-slide").each(function() {
+	//console.log("Setting " + this.name + " to " + this.valueAsNumber);
+	SetConstant(this.name, this.valueAsNumber);
+});
+RunSim();
+UpdateCharts(run);
+}
+
+d3.select("button.resetAll").nodes()[0].onclick = function() {
+resetAllSliders();
+runModel(1);
+}
+
+d3.select("button.exportCSV").nodes()[0].onclick = function() {
+ExportCSV();
+}
+
+d3.selectAll("input.io-slider-slide").nodes().forEach(function(i){
+i.oninput = function() {
+// update the number shown for all sliders of this var
+d3.selectAll("div.io-slider-box[name=\"" + i.name + "\"]").text(i.valueAsNumber);
+d3.selectAll("input.io-slider-slide[name=\"" + i.name + "\"]").each(function() { this.value = i.valueAsNumber; })
+runModel(1);
+};
+});
+
+</script>
+
+</body></html>
